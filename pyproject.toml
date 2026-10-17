@@ -1,0 +1,20 @@
+[project]
+name = "wireguard-exporter"
+version = "0.1.0"
+description = "Prometheus exporter for WireGuard peer statistics"
+requires-python = ">=3.14"
+dependencies = [
+    "prometheus-client==0.26.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+pythonpath = ["exporter"]
+testpaths = ["tests"]
